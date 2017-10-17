@@ -24,8 +24,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your email here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="euu-WS-LgZ">
-                                <rect key="frame" x="98" y="220" width="180" height="30"/>
+                                <rect key="frame" x="98" y="220" width="180" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hPD-fe-Jsl"/>
                                     <constraint firstAttribute="width" constant="180" id="rHn-8z-OqW"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -33,7 +34,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-h1-BgN">
-                                <rect key="frame" x="161.5" y="387" width="52" height="33"/>
+                                <rect key="frame" x="161.5" y="395" width="52" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign In"/>
                             </button>
@@ -50,14 +51,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrh-SQ-6b6">
-                                <rect key="frame" x="150.5" y="286" width="74" height="21"/>
+                                <rect key="frame" x="150.5" y="290" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min 8 characters..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-8s-Bep">
-                                <rect key="frame" x="98" y="321" width="180" height="30"/>
+                                <rect key="frame" x="98" y="325" width="180" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2LT-To-Jjf"/>
                                     <constraint firstAttribute="width" constant="180" id="pd6-sl-d5Z"/>
                                 </constraints>
                                 <nil key="textColor"/>
