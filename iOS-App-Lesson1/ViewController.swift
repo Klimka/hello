@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var loginFieldConnect: UITextField!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        //жест нажатия
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        
+        //присваиваем его UIScrollView
+        scrollView?.addGestureRecognizer(hideKeyboardGesture)
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +29,30 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func buttonPressed(_ sender: Any) {
-   print("кнопка нажалась!")
-    }
+    @IBOutlet weak var loginInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
+    
+    
+    
+    @IBAction func actionSign(_ sender: Any) {
+    
+        let login = loginInput.text!
+        let password = passwordInput.text!
+
+        if login == "klim" && password == "123" {
+            print("login succesful")
+        } else {
+            print("you shall not pass")
+        }
+  }
+    
     
     @IBOutlet weak var scrollView: UIScrollView!
     
     
+ 
+    
+
     
 
 
@@ -55,9 +80,7 @@ extension ViewController {
         scrollView?.scrollIndicatorInsets = contentInsets
     }
     
-    @objc func hideKeyboard() {
-        scrollView.endEditing(true)
-    }
+
 
     
     
@@ -80,9 +103,15 @@ extension ViewController {
         
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    
     }
     
+    //скрывание клавиатуры по нажатию на пустой экран
+    
+    @objc func hideKeyboard() {
+        self.scrollView?.endEditing(true)
+    }
+ 
+
 }
 
 
