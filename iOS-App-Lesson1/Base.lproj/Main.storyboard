@@ -49,9 +49,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j2w-D8-Bni"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SuperPage" id="pYN-JA-MaM"/>
+                    <navigationItem key="navigationItem" title="SuperPage" id="pYN-JA-MaM">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="n4X-e7-Mdi" userLabel="Logout">
+                            <connections>
+                                <action selector="unwindSegue:" destination="Jk9-CI-G60" id="xoT-mS-SOl"/>
+                                <segue destination="Jk9-CI-G60" kind="unwind" unwindAction="unwindSegueWithUnwindSegue:" id="H7Q-Bp-u8A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaE-9m-Ddx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jk9-CI-G60" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="626" y="-493"/>
         </scene>
