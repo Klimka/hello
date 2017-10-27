@@ -7,9 +7,38 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
    
+    override func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
+        let login = loginInput.text!
+        let password = passwordInput.text!
+        
+                
+        if login == "klim" && password == "123" {
+            print("login succesful")
+            return true
+        } else {
+            print("you shall not pass")
+            
+            //создаем сообщение об ошибке
+            let alert = UIAlertController(title: "You Shall Not Pass", message: "wrong username or password", preferredStyle: .alert)
+            //создаем кнопку для UIAlertController
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            //добавляем кнопку на UIAlertController
+            alert.addAction(action)
+            //показываем его
+            present(alert, animated: true, completion: nil)
+            
+            return false
+            
+        }
+    }
+    
+
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +65,8 @@ class ViewController: UIViewController {
     
     @IBAction func actionSign(_ sender: Any) {
     
-        let login = loginInput.text!
-        let password = passwordInput.text!
 
-        if login == "klim" && password == "123" {
-            print("login succesful")
-        } else {
-            print("you shall not pass")
-        }
-  }
-    
+}
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -114,9 +135,10 @@ extension ViewController {
     }
  
 
+    
+    
+    
 }
-
-
 
 
 
